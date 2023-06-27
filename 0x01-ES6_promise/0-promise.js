@@ -1,8 +1,9 @@
 export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    if (1 + 1 == 2) reject(new Error('Error'));
-    resolve('Success');
+    if (!success) reject(new Error('Error'));
+    resolve({
+      status: 200,
+      body: 'Success',
+    });
   });
 }
-
-
